@@ -1,0 +1,310 @@
+/* Variables de colores */
+:root {
+    --color-fondo: #1e1e1e;
+    --color-contenedor: #2c2c2c;
+    --color-contenedor-claro: #363636;
+    --color-verde-principal: #0D5449;
+    --color-verde-claro: #3b963e;
+    --color-texto: #ffffff; 
+    --color-borde: #444; 
+    --color-texto-secundario: #d4d4d4; 
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: var(--color-texto);
+    font-weight: 500;
+}
+
+.chat-container {
+    background-color: var(--color-contenedor);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.5em;
+    margin: -20px;
+    margin-bottom: 20px;
+    background-color: var(--color-verde-principal);
+    color: var(--color-texto);
+    padding: 18px 5px;
+    border-top-left-radius:  12px;
+    border-top-right-radius:  12px;
+}
+
+/* Nombre de usuario en la parte superior */
+.user-name-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#name {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid var(--color-borde);
+    background-color: var(--color-contenedor);
+    color: var(--color-texto);
+}
+
+#name:focus {
+    outline: none; 
+}
+
+/* Estilo del área de chat */
+.chat-box {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding-right: 10px;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+#messages {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.no-messages {
+    text-align: center;
+    color: var(--color-texto-secundario);
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* Estilo de los mensajes */
+.message-item {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: var(--color-contenedor);
+    border: 1px solid var(--color-borde);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: auto;
+}
+
+.sent {
+    background-color: var(--color-verde-principal);
+    align-self: flex-end;
+    margin-right: 40px;
+    margin-left: 40px;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.received {
+    background-color: var(--color-contenedor-claro);
+    align-self: flex-start;
+    margin-right: 40px;
+    margin-left: 40px;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+/* Triángulo que apunta al icono del usuario */
+.sent::before {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: 10px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid var(--color-verde-principal);
+}
+
+.received::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 10px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid var(--color-contenedor-claro);
+}
+
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+/* nombre del usuario */
+.name {
+    font-weight: 800;
+    color: rgb(93, 179, 233);
+}
+
+.time {
+    color: var(--color-texto-secundario);
+    font-size: 12px;
+    font-weight: 500;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}
+
+.message-body {
+    font-size: 18px;
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+/* Icono del usuario */
+.initial-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--color-verde-principal);
+    color: var(--color-texto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+}
+
+.sent .initial-icon {
+    right: -40px;
+}
+
+.received .initial-icon {
+    left: -40px;
+}
+
+/* Estilo del área de entrada */
+.input-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-area input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid var(--color-borde);
+    border-radius: 4px;
+    width: 80%;
+    background-color: var(--color-contenedor);
+    color: var(--color-texto);
+}
+
+.input-area input:focus {
+    outline: none; 
+}
+
+.input-area button {
+    padding: 10px;
+    background-color: var(--color-verde-principal);
+    color: var(--color-texto);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-area button:hover {
+    background-color: var(--color-verde-claro);
+}
+
+.input-area button:disabled {
+    background-color: #449185;
+    cursor: not-allowed;
+}
+
+/* Icono del botón de enviar */
+.fa-paper-plane {
+    font-size: 20px;
+}
+
+/* Estilo para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: var(--color-contenedor);
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    position: relative;
+}
+
+.close-button {
+    color: var(--color-texto-secundario);
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: var(--color-texto);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsividad */
+@media screen and (max-width: 500px) {
+    .chat-container {
+        width: 100%;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    .input-area button {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+
+/* otros */
+.chat-box::-webkit-scrollbar {
+    width: 0px; /* Esto elimina la barra de desplazamiento en Webkit (Chrome, Safari, etc.) */
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+    background: transparent; /* También asegura que el pulgar de la barra sea invisible */
+}

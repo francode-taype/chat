@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
+    <title>Chat WebSocket</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="chat-container">
+        <h1>Chat Francode</h1>
+
+        <!-- Nombre del usuario editable -->
+        <div class="user-name-container">
+            <input type="text" id="name" placeholder="Ingresa tu nombre para poder enviar mensajes." oninput="updateName()" maxlength="20">
+        </div>
+
+        <div class="chat-box">
+            <ul id="messages">
+                <li class="no-messages">No hay mensajes todavía...</li>
+            </ul>
+        </div>
+
+        <div class="input-area">
+            <input type="text" id="message" placeholder="Tu mensaje" onkeydown="handleEnter(event)" maxlength="1000" oninput="validateSendButton()">
+            <button onclick="sendMessage()" id="send-button" disabled>
+                <i class="fa fa-paper-plane"></i> <!-- Icono de enviar -->
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal de advertencia -->
+    <div id="warning-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.1/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <script src="chat.js"></script> <!-- Enlace al archivo JS -->
+</body>
+</html>
