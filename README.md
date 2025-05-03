@@ -1,4 +1,4 @@
-# Chat en Tiempo Real con Spring Boot
+# Chat en Tiempo Real
 
 Aplicación de chat en tiempo real construida con **Spring Boot** en el backend y **HTML, CSS, JavaScript** en el frontend, utilizando WebSockets y STOMP para la comunicación entre usuarios.
 ### Capturas de Pantalla
