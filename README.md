@@ -34,7 +34,7 @@ Para ejecutar el backend, necesitas tener **Java 21** y **Maven** instalados en 
 
 1. Abre la carpeta `chatClient`.
 
-2. Asegúrate de ejecutar el frontend en un servidor local para que funcione correctamente con WebSockets. Puedes usar una extensión como **Go Live** en **Visual Studio Code** para levantar un servidor local y servir los archivos HTML, CSS y JS.
+2. Asegúrate de ejecutar el frontend en un servidor local para que funcione correctamente con WebSockets.
 
 3. Asegúrate de que el servidor WebSocket esté configurado correctamente en el archivo `WebSocketConfig.java`, en la ruta `chat/src/main/java/dev/francode/chat/config`. Verifica que el CORS esté habilitado para la ruta de tu cliente, asegurándote de que esté configurado correctamente con `.setAllowedOrigins("http://127.0.0.1:5500")`, donde el servidor de cliente esté corriendo en esa dirección.
 
