@@ -6,8 +6,8 @@ Aplicación de chat en tiempo real construida con **Spring Boot** en el backend 
 Vista previa de la aplicación:
 
 <p align="center">
-  <img src="https://github.com/francode-taype/chat/blob/main/chatClient/chat1.png?raw=true" width="45%" />
-  <img src="https://github.com/francode-taype/chat/blob/main/chatClient/chat2.png?raw=true" width="45%" />
+  <img src="https://github.com/fran-codev/chat/blob/main/chatClient/chat1.png?raw=true" width="45%" />
+  <img src="https://github.com/fran-codev/chat/blob/main/chatClient/chat2.png?raw=true" width="45%" />
 </p>
 
 ## Instalación y Ejecución
@@ -18,7 +18,7 @@ Para ejecutar el backend, necesitas tener **Java 21** y **Maven** instalados en 
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/francode-taype/chat.git
+   git clone https://github.com/fran-codev/chat.git
 
 2. Navega al directorio del proyecto:
     ```bash
